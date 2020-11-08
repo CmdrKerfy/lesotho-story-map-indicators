@@ -336,8 +336,188 @@ var config = {
             }]
         },
 
+        {
+            id: 'TXRTT-Intro',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/chapter_titles/8_TX_RTT.png',
+            location: {
+                center: [27.48014, -29.61933],
+                zoom: 7.61,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-8',
+                opacity: 0
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-8',
+                opacity: 0
+            }]
+        },
 
+        {
+            id: 'TX-RTT',
+            title: 'Indicator: TX_RTT',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/Family5.jpg',
+            description: 'Patients returning to treatment diverge noticeably from the other treatment indicators. Unlike the others, heavy concentrations are instead within Teya-Teyaneng, Mapoteng, and at its highest, Mamafubelu Community Councils.',
+            location: {
+                center: [27.48014, -29.61933],
+                zoom: 7.61,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-8',
+                opacity: 1
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-8',
+                opacity: 0
+            }]
+        },
 
+        {
+            id: 'TX-RTT-Zoom',
+            title: 'Teya-Teyaneng, Mapoteng, and Mamafubelu Community Councils.',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/PHI_Lesotho.jpg',
+            description: 'Within Mamafubelu, return to follow-up is concentrated in on the east side, near the border with Bolahla. The health facility, Pontmain H/C, is located east of Ha Fako and Ha Sekeleme. <br /> <br /> In Mapoteng Community Council, the return to treatment population is concentrated in the NW quadrent of the city. Specifically, Maluti Adventist Hospital.<br /> <br /> For Teya-Teyaneng, patients were returning to followup using the Berea Government Hospital, located near the center of the city.',
+            location: {
+                center: [27.82559, -28.96590],
+                zoom: 9.58,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-8',
+                opacity: 1
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-8',
+                opacity: 0
+            }]
+        },
+
+        {
+            id: 'HTS_TST-Intro',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/chapter_titles/1_HTS_TST.png',
+            location: {
+                center: [27.48014, -29.61933],
+                zoom: 7.61,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-1',
+                opacity: 0
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-1',
+                opacity: 0
+            }]
+        },
+
+        {
+            id: 'HTS_TST',
+            title: 'Indicator: HTS_TST',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/PMTCT_Lesotho.jpg',
+            description: 'Switching to testing, most of the HIV related testing occurs within Mohale\'s Hoek Urban Council and Maseru City Council, with the majority occuring in the former.',
+            location: {
+                center: [27.48014, -29.61933],
+                zoom: 7.61,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-1',
+                opacity: 1
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-1',
+                opacity: 0
+            }]
+        },
+
+        {
+            id: 'HTS-TST-Zoom',
+            title: 'Mohale\'s Hoek Urban Council',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/Testing.png',
+            description: 'Within Mohale\'s Hoek Urban Council, testing is primarily in the northeast, using Nts\'ekhe Hospital, located west of Mohale\'s Hoek High School',
+            location: {
+                center: [27.42334, -30.16053],
+                zoom: 12.21,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-1',
+                opacity: 1
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-1',
+                opacity: 0
+            }]
+        },
+
+        {
+            id: 'HTS_TST-POS-Intro',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/chapter_titles/2_HTS_TST_POS.png',
+            location: {
+                center: [27.48014, -29.61933],
+                zoom: 7.61,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-2',
+                opacity: 0
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-2',
+                opacity: 0
+            }]
+        },
+
+        {
+            id: 'HTS-TST-POS',
+            title: 'Indicator: HTS_TST_POS',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/Testing2.jpg',
+            description: 'When isolating for postive results, the testing landscape changes slightly. While Mohale\'s Hoek Urban Council and Maseru City Council are still the focus, Mafeteng Urban Council has also reported an above average amount of positive tests. As the Mohale\'s Hoek Urban Council outlook is the same as HTS_TST, we will instead do a deeper dive into Maseru City Council.',
+            location: {
+                center: [27.48014, -29.61933],
+                zoom: 7.61,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-2',
+                opacity: 1
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-2',
+                opacity: 0
+            }]
+        },
+
+        {
+            id: 'HTS-TST-POS-Zoom',
+            title: 'Maseru Community Council',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/Testing3.jpg',
+            description: 'Postive tests are mostly evenly distributed around the health facilities within Maseru with particularly high amouonts around Maseru East, Lower/Upper Thame, White City, and Ha Motseoneng.',
+            location: {
+                center: [27.45210, -29.31503],
+                zoom: 11.64,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-2',
+                opacity: 1
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-2',
+                opacity: 0
+            }]
+        },
 
     ]
 };
