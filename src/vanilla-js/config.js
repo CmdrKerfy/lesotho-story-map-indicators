@@ -11,9 +11,9 @@ var config = {
 
         {
             id: 'Intro',
-            title: 'Visualing the Strain on Healthcare Workers in Kenya',
-            image: 'https://raw.githubusercontent.com/CmdrKerfy/covid-hiv-story-map-hcw/master/src/vanilla-js/images/COVIDCases.png',
-            description: 'This story map is based off an impact simulation developed by PEPFAR to capture the potential effects of COVID-19 on healthcare workers in Kenya.  While the model is susceptible to change, the hope is to inform our partners of the possible impact a COVID-19 outbreak will have on PEPFAR programming nationwide. <br /> ',
+            title: 'Geographical Visualizations',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/Games_Lesotho.jpg',
+            description: 'This story map is based off a deep dive analysis of: <br /> <br /> TX_CURR - TX_NET - TX_NET_NEW <br /> TX_ML - TX_PVLS - TX_RTT <br /> HTS_TST and HTS_TST_POS <br /> <br />  These results are meant to be used in assisting with program improvement.<br /> ',
             location: {
                 center: [27.48014, -29.61933],
                 zoom: 7.61,
@@ -31,68 +31,47 @@ var config = {
         },
 
         {
-            id: 'Intro-Intro',
-            image: 'https://raw.githubusercontent.com/CmdrKerfy/covid-hiv-story-map-hcw/master/img/chapter_titles/GenNotes.png',
+            id: 'TXCURR-Intro',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/chapter_titles/3_TX_CURR.png',
             location: {
-                center: [27.77789, -29.59437],
+                center: [27.48014, -29.61933],
                 zoom: 7.61,
                 pitch: 0.00,
                 bearing: 0.00
             },
             onChapterEnter: [{
-                layer: 'April 8th - Doc CURR',
+                layer: 'lesotho-1',
                 opacity: 0
             }],
             onChapterExit: [{
-                layer: 'April 8th - Doc CURR',
-                opacity: 0.
+                layer: 'lesotho-1',
+                opacity: 0
             }]
         },
 
         {
-            id: 'Scenarios-Intro',
-            title: 'Study Background',
-            image: 'https://raw.githubusercontent.com/CmdrKerfy/covid-hiv-story-map-hcw/master/img/wikicom/h13.jpg',
-            description: 'Included within these maps are five scenarios. Unless otherwise stated, all visualizations will depict the first (base) scenario, with significant differences highlighted when applicable.',
+            id: 'TX-CURR',
+            title: 'Indicator: TX_CURR',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/Family_Lesotho.jpg',
+            description: 'We will start with taking a closer look at TX_CURR. As you can see on the map there are strong concetrations in Hlotse Urban, Teya-Teyaneng, Mafeteng Urban, and Maseru City Councils. For this indicator, we will take a closer look at the density within Maseru CC.',
             location: {
-                center: [35.40804, -0.19256],
-                zoom: 5.71,
+                center: [27.48014, -29.61933],
+                zoom: 7.61,
                 pitch: 0.00,
                 bearing: 0.00
             },
             onChapterEnter: [{
-                layer: 'April 8th - Doc CURR',
-                opacity: 0
+                layer: 'lesotho-3',
+                opacity: 1
             }],
             onChapterExit: [{
-                layer: 'April 8th - Doc CURR',
-                opacity: 0.
+                layer: 'lesotho-3',
+                opacity: 0
             }]
         },
 
-        // {
-        //     id: 'Scenarios-Diff',
-        //     title: 'Scenario #1 vs Scenario #5',
-        //     image: 'https://raw.githubusercontent.com/CmdrKerfy/covid-hiv-story-map-hcw/master/img/wikicom/h21.jpg',
-        //     description: 'Please note that the Scenario #1 (Base) is considered the best case within the context of this study. Conversely, Scenario #5 illustrates the worst outcome from a COVID outbreak.',
-        //     location: {
-        //         center: [35.40804, -0.19256],
-        //         zoom: 5.71,
-        //         pitch: 0.00,
-        //         bearing: 0.00
-        //     },
-        //     onChapterEnter: [{
-        //         layer: 'April 8th - Doc CURR',
-        //         opacity: 0
-        //     }],
-        //     onChapterExit: [{
-        //         layer: 'April 8th - Doc CURR',
-        //         opacity: 0.
-        //     }]
-        // },
-
         {
-            id: 'Gen-Intro',
+            id: 'TX-CURR-Zoom',
             image: 'https://raw.githubusercontent.com/CmdrKerfy/covid-hiv-story-map-hcw/master/img/chapter_titles/hcstaff.png',
             location: {
                 center: [35.40804, -0.19256],
