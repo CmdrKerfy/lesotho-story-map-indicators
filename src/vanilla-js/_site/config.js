@@ -4,9 +4,9 @@ var config = {
     showMarkers: false,
     theme: 'red',
     alignment: 'left',
-    title: 'How COVID-19 Could Overload Healthcare Workers in Kenya',
-    subtitle: 'Six Week Projections',
-    footer: 'Source of Data: PEPFAR <br /> Source of Images: PEPFAR, Getty Images, Associated Press, VOA News, Bloomberg News, BBC News, Ruters, Al Jazeera, National Media Group, and Wikicommons',
+    title: 'Indicator Analysis Within Lesotho',
+    subtitle: 'An exploration of Treatment and Testing',
+    footer: 'Source of Data: PEPFAR <br /> Source of Images: PEPFAR, Getty Images, Associated Press, VOA News, Bloomberg News, BBC News, Ruters.',
     chapters: [
 
         {
@@ -15,7 +15,7 @@ var config = {
             image: 'https://raw.githubusercontent.com/CmdrKerfy/covid-hiv-story-map-hcw/master/src/vanilla-js/images/COVIDCases.png',
             description: 'This story map is based off an impact simulation developed by PEPFAR to capture the potential effects of COVID-19 on healthcare workers in Kenya.  While the model is susceptible to change, the hope is to inform our partners of the possible impact a COVID-19 outbreak will have on PEPFAR programming nationwide. <br /> ',
             location: {
-                center: [27.77789, -29.59437],
+                center: [27.48014, -29.61933],
                 zoom: 7.61,
                 pitch: 0.00,
                 bearing: 0.00
@@ -34,8 +34,8 @@ var config = {
             id: 'Intro-Intro',
             image: 'https://raw.githubusercontent.com/CmdrKerfy/covid-hiv-story-map-hcw/master/img/chapter_titles/GenNotes.png',
             location: {
-                center: [35.40804, -0.19256],
-                zoom: 5.71,
+                center: [27.77789, -29.59437],
+                zoom: 7.61,
                 pitch: 0.00,
                 bearing: 0.00
             },
