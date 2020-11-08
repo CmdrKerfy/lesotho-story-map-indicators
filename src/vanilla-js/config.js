@@ -1,5 +1,5 @@
 var config = {
-    style: 'mapbox://styles/kerfy/ck9u32oq914jz1ipy74ytvn36',
+    style: 'mapbox://styles/kerfy/ckh52qwcb031619pb99pv42gv',
     accessToken: 'pk.eyJ1Ijoia2VyZnkiLCJhIjoiY2szOTE0dG43MDE4dDNqbzZ4ajdld3A1eCJ9.IYIY3O7YU3fZvR2izUZUGQ',
     showMarkers: false,
     theme: 'red',
@@ -15,17 +15,17 @@ var config = {
             image: 'https://raw.githubusercontent.com/CmdrKerfy/covid-hiv-story-map-hcw/master/src/vanilla-js/images/COVIDCases.png',
             description: 'This story map is based off an impact simulation developed by PEPFAR to capture the potential effects of COVID-19 on healthcare workers in Kenya.  While the model is susceptible to change, the hope is to inform our partners of the possible impact a COVID-19 outbreak will have on PEPFAR programming nationwide. <br /> ',
             location: {
-                center: [35.40804, -0.19256],
-                zoom: 5.71,
+                center: [27.77789, -29.59437],
+                zoom: 7.61,
                 pitch: 0.00,
                 bearing: 0.00
             },
             onChapterEnter: [{
-                layer: 'April 8th - Doc CURR',
+                layer: 'lesotho-1',
                 opacity: 0
             }],
             onChapterExit: [{
-                layer: 'April 8th - Doc CURR',
+                layer: 'lesotho-1',
                 opacity: 0.
             }]
         },
