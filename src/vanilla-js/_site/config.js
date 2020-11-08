@@ -72,164 +72,125 @@ var config = {
 
         {
             id: 'TX-CURR-Zoom',
-            image: 'https://raw.githubusercontent.com/CmdrKerfy/covid-hiv-story-map-hcw/master/img/chapter_titles/hcstaff.png',
+            title: 'Maseru Community Council',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/Couple_Lesotho.png',
+            description: 'When taking a closer look, we can see that there are particular concentrations in the southeast part of the CC, near the border with Berea. While Borokhoaneng and Lower Seoli have much of it, high levels are consistent throughout the capital.',
             location: {
-                center: [35.40804, -0.19256],
-                zoom: 5.71,
+                center: [27.45210, -29.31503],
+                zoom: 11.64,
                 pitch: 0.00,
                 bearing: 0.00
             },
             onChapterEnter: [{
-                layer: 'April 8th - Doc CURR',
+                layer: 'lesotho-3',
+                opacity: 1
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-3',
+                opacity: 0.
+            }]
+        },
+
+        {
+            id: 'TXNEW-Intro',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/chapter_titles/4_TX_NEW.png',
+            location: {
+                center: [27.48014, -29.61933],
+                zoom: 7.61,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-4',
                 opacity: 0
             }],
             onChapterExit: [{
-                layer: 'April 8th - Doc CURR',
-                opacity: 0.
+                layer: 'lesotho-4',
+                opacity: 0
             }]
         },
 
         {
-            id: 'Aspect-1',
-            title: 'An Expected Decrease in Available Healthcare Workers',
-            image: 'https://raw.githubusercontent.com/CmdrKerfy/covid-hiv-story-map-hcw/master/img/WeekOne_2.png',
-            description: 'If current trends continue, COVID-19 will likely significantly reduce the number of available healthcare workers in Kenya. As infections increase, more and more healthcare workers will become affected and be unable to provide healthcare services. The map in this box shows the number of available doctors and nurses currently, and the large map shows the projected number of available doctors and nurses in six weeks.',
+            id: 'TX-NEW',
+            title: 'Indicator: TX_NEW',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/Hospital3.jpg',
+            description: 'Next, we will move down the treatment cascade to TX_NEW. As you can see on the map there are strong concetrations in Maputose Urban, Teya-Teyaneng, Manonyane, Mafeteng, and Maseru City Councils. For this indicator, we will again take a closer look at the density within Maseru CC.',
             location: {
-                center: [35.40804, -0.19256],
-                zoom: 5.71,
+                center: [27.48014, -29.61933],
+                zoom: 7.61,
                 pitch: 0.00,
                 bearing: 0.00
             },
             onChapterEnter: [{
-                    layer: 'April 8th - Doc Week5-6',
-                    opacity: 0.45
-                },
-                {
-                    layer: 'April 8th - Nurse Week5-6',
-                    opacity: 0.45
-                }
-            ],
-            onChapterExit: [{
-                    layer: 'April 8th - Doc Week5-6',
-                    opacity: 0.
-                },
-                {
-                    layer: 'April 8th - Nurse Week5-6',
-                    opacity: 0
-                }
-            ]
-        },
-
-        {
-            id: 'Lamu',
-            description: 'In every scenario, we are expecting total staff capacity in Isiolo and Lamu will be critically low to non-existent by week 1.',
-            location: {
-                center: [37.40658, -0.17094],
-                zoom: 6.70,
-                pitch: 0.00,
-                bearing: 0.00
-            },
-            onChapterEnter: [{
-                layer: 'Lamu-isiolo',
-                opacity: 0.45
+                layer: 'lesotho-4',
+                opacity: 1
             }],
             onChapterExit: [{
-                layer: 'Lamu-isiolo',
-                opacity: 0.
+                layer: 'lesotho-4',
+                opacity: 0
             }]
         },
 
         {
-            id: 'Aspect3-HIVgraph',
-            title: 'An Expected Increase in Health Visits by People Living with HIV',
-            image: 'https://raw.githubusercontent.com/CmdrKerfy/covid-hiv-story-map-hcw/master/src/vanilla-js/images/COVIDVisitsHIV.png',
-            description: 'While the number of nurses and doctors will decrease, as seeen on the map to the right, the number of health facility visits will simultaneously increase. This dramatic upward trend in demand by the HIV population will begin to strain the shrinking number of healtcare workers by the end of week one.',
+            id: 'TX-NEW-Zoom',
+            title: 'Maseru Community Council',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/Hospital2.JPG',
+            description: 'When taking a closer look, we can see that there are particular concentrations the center of the CC, in Upper/Lower Thamae and New Europa neighbhorhoods.',
             location: {
-                center: [35.40804, -0.19256],
-                zoom: 5.71,
+                center: [27.45210, -29.31503],
+                zoom: 11.64,
                 pitch: 0.00,
                 bearing: 0.00
             },
             onChapterEnter: [{
-                    layer: 'April 8th - Nurse Week1',
-                    opacity: 0.45
-                },
-                {
-                    layer: 'April 8th - Doc Week1',
-                    opacity: 0.45
-                }
-            ],
+                layer: 'lesotho-4',
+                opacity: 1
+            }],
             onChapterExit: [{
-                    layer: 'April 8th - Nurse Week1',
-                    opacity: 0
-                },
-                {
-                    layer: 'April 8th - Doc Week1',
-                    opacity: 0
-                }
-            ]
+                layer: 'lesotho-4',
+                opacity: 0.
+            }]
+        },
+
+
+        {
+            id: 'TXNETNEW-Intro',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/chapter_titles/5_TX_NET_NEW.png',
+            location: {
+                center: [27.48014, -29.61933],
+                zoom: 7.61,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-5',
+                opacity: 0
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-5',
+                opacity: 0
+            }]
         },
 
         {
-            id: 'Aspect3-Week-Two',
-            title: 'Week Two Staff Capacity',
-            image: 'https://raw.githubusercontent.com/CmdrKerfy/covid-hiv-story-map-hcw/master/img/wikicom/h6.jpg',
-            description: 'By week two, as the number of healthcare workers becomes smaller, expect people living with HIV to begin experiencing difficulties receiving treatment.',
+            id: 'TX-NET-NEW',
+            title: 'Indicator: TX_NET_NEW',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/Family2_Lesotho.jpg',
+            description: 'Continuing onto the twin indicator TX_NET_NEW, there are strong concetrations in Maputose Urban, Teya-Teyaneng, Manonyane, Mafeteng, and Maseru City Councils. For this indicator, we will again take a closer look at the density within Maseru CC.',
             location: {
-                center: [35.40804, -0.19256],
-                zoom: 5.71,
+                center: [27.48014, -29.61933],
+                zoom: 7.61,
                 pitch: 0.00,
                 bearing: 0.00
             },
             onChapterEnter: [{
-                    layer: 'April 8th - Doc Week2',
-                    opacity: 0.45
-                },
-                {
-                    layer: 'April 8th - Nurse Week2',
-                    opacity: 0.45
-                }
-            ],
+                layer: 'lesotho-5',
+                opacity: 1
+            }],
             onChapterExit: [{
-                    layer: 'April 8th - Doc Week2',
-                    opacity: 0.
-                },
-                {
-                    layer: 'April 8th - Nurse Week2',
-                    opacity: 0
-                }
-            ]
-        },
-
-        {
-            id: 'Aspect3-Week-Three',
-            title: 'Week Three Staff Capacity',
-            image: 'https://raw.githubusercontent.com/CmdrKerfy/covid-hiv-story-map-hcw/master/img/news/ap1.jpg',
-            description: 'By week three, the demand is already far outpacing the continually shrinking workforce.',
-            location: {
-                center: [35.40804, -0.19256],
-                zoom: 5.71,
-                pitch: 0.00,
-                bearing: 0.00
-            },
-            onChapterEnter: [{
-                    layer: 'April 8th - Doc Week3',
-                    opacity: 0.45
-                },
-                {
-                    layer: 'April 8th - Nurse Week3',
-                    opacity: 0.45
-                }
-            ],
-            onChapterExit: [{
-                    layer: 'April 8th - Doc Week3',
-                    opacity: 0.
-                },
-                {
-                    layer: 'April 8th - Nurse Week3',
-                    opacity: 0
-                }
-            ]
+                layer: 'lesotho-5',
+                opacity: 0
+            }]
         },
 
         {
