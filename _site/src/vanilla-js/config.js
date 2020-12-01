@@ -1,625 +1,523 @@
 var config = {
-    style: 'mapbox://styles/kerfy/ck9u32oq914jz1ipy74ytvn36',
+    style: 'mapbox://styles/kerfy/ckh52qwcb031619pb99pv42gv',
     accessToken: 'pk.eyJ1Ijoia2VyZnkiLCJhIjoiY2szOTE0dG43MDE4dDNqbzZ4ajdld3A1eCJ9.IYIY3O7YU3fZvR2izUZUGQ',
     showMarkers: false,
     theme: 'red',
     alignment: 'left',
-    title: 'How COVID-19 Could Overload Healthcare Workers in Kenya',
-    subtitle: 'Six Week Projections',
-    footer: 'Source of Data: PEPFAR <br /> Source of Images: PEPFAR, Getty Images, Associated Press, VOA News, Bloomberg News, BBC News, Ruters, Al Jazeera, National Media Group, and Wikicommons',
+    title: 'Indicator Analysis Within Lesotho',
+    subtitle: 'An exploration of Treatment and Testing',
+    footer: 'Source of Data: PEPFAR <br /> Source of Images: PEPFAR, Getty Images, Associated Press, VOA News, Bloomberg News, BBC News, Ruters.',
     chapters: [
 
         {
             id: 'Intro',
-            title: 'Visualing the Strain on Healthcare Workers in Kenya',
-            image: 'https://raw.githubusercontent.com/CmdrKerfy/covid-hiv-story-map-hcw/master/src/vanilla-js/images/COVIDCases.png',
-            description: 'This story map is based off an impact simulation developed by PEPFAR to capture the potential effects of COVID-19 on healthcare workers in Kenya.  While the model is susceptible to change, the hope is to inform our partners of the possible impact a COVID-19 outbreak will have on PEPFAR programming nationwide. <br /> ',
+            title: 'Geographical Visualizations',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/Games_Lesotho.jpg',
+            description: 'This story map is based off a deep dive analysis of: <br /> <br /> TX_CURR - TX_NET - TX_NET_NEW <br /> TX_ML - TX_PVLS - TX_RTT <br /> HTS_TST and HTS_TST_POS <br /> <br />  These results are meant to be used in assisting with program improvement.<br /> ',
             location: {
-                center: [35.40804, -0.19256],
-                zoom: 5.71,
+                center: [27.48014, -29.61933],
+                zoom: 7.61,
                 pitch: 0.00,
                 bearing: 0.00
             },
             onChapterEnter: [{
-                layer: 'April 8th - Doc CURR',
+                layer: 'lesotho-1',
                 opacity: 0
             }],
             onChapterExit: [{
-                layer: 'April 8th - Doc CURR',
+                layer: 'lesotho-1',
                 opacity: 0.
             }]
         },
 
         {
-            id: 'Intro-Intro',
-            image: 'https://raw.githubusercontent.com/CmdrKerfy/covid-hiv-story-map-hcw/master/img/chapter_titles/GenNotes.png',
+            id: 'TXCURR-Intro',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/chapter_titles/3_TX_CURR.png',
             location: {
-                center: [35.40804, -0.19256],
-                zoom: 5.71,
+                center: [27.48014, -29.61933],
+                zoom: 7.61,
                 pitch: 0.00,
                 bearing: 0.00
             },
             onChapterEnter: [{
-                layer: 'April 8th - Doc CURR',
+                layer: 'lesotho-1',
                 opacity: 0
             }],
             onChapterExit: [{
-                layer: 'April 8th - Doc CURR',
-                opacity: 0.
-            }]
-        },
-
-        {
-            id: 'Scenarios-Intro',
-            title: 'Study Background',
-            image: 'https://raw.githubusercontent.com/CmdrKerfy/covid-hiv-story-map-hcw/master/img/wikicom/h13.jpg',
-            description: 'Included within these maps are five scenarios. Unless otherwise stated, all visualizations will depict the first (base) scenario, with significant differences highlighted when applicable.',
-            location: {
-                center: [35.40804, -0.19256],
-                zoom: 5.71,
-                pitch: 0.00,
-                bearing: 0.00
-            },
-            onChapterEnter: [{
-                layer: 'April 8th - Doc CURR',
-                opacity: 0
-            }],
-            onChapterExit: [{
-                layer: 'April 8th - Doc CURR',
-                opacity: 0.
-            }]
-        },
-
-        // {
-        //     id: 'Scenarios-Diff',
-        //     title: 'Scenario #1 vs Scenario #5',
-        //     image: 'https://raw.githubusercontent.com/CmdrKerfy/covid-hiv-story-map-hcw/master/img/wikicom/h21.jpg',
-        //     description: 'Please note that the Scenario #1 (Base) is considered the best case within the context of this study. Conversely, Scenario #5 illustrates the worst outcome from a COVID outbreak.',
-        //     location: {
-        //         center: [35.40804, -0.19256],
-        //         zoom: 5.71,
-        //         pitch: 0.00,
-        //         bearing: 0.00
-        //     },
-        //     onChapterEnter: [{
-        //         layer: 'April 8th - Doc CURR',
-        //         opacity: 0
-        //     }],
-        //     onChapterExit: [{
-        //         layer: 'April 8th - Doc CURR',
-        //         opacity: 0.
-        //     }]
-        // },
-
-        {
-            id: 'Gen-Intro',
-            image: 'https://raw.githubusercontent.com/CmdrKerfy/covid-hiv-story-map-hcw/master/img/chapter_titles/hcstaff.png',
-            location: {
-                center: [35.40804, -0.19256],
-                zoom: 5.71,
-                pitch: 0.00,
-                bearing: 0.00
-            },
-            onChapterEnter: [{
-                layer: 'April 8th - Doc CURR',
-                opacity: 0
-            }],
-            onChapterExit: [{
-                layer: 'April 8th - Doc CURR',
-                opacity: 0.
-            }]
-        },
-
-        {
-            id: 'Aspect-1',
-            title: 'An Expected Decrease in Available Healthcare Workers',
-            image: 'https://raw.githubusercontent.com/CmdrKerfy/covid-hiv-story-map-hcw/master/img/WeekOne_2.png',
-            description: 'If current trends continue, COVID-19 will likely significantly reduce the number of available healthcare workers in Kenya. As infections increase, more and more healthcare workers will become affected and be unable to provide healthcare services. The map in this box shows the number of available doctors and nurses currently, and the large map shows the projected number of available doctors and nurses in six weeks.',
-            location: {
-                center: [35.40804, -0.19256],
-                zoom: 5.71,
-                pitch: 0.00,
-                bearing: 0.00
-            },
-            onChapterEnter: [{
-                    layer: 'April 8th - Doc Week5-6',
-                    opacity: 0.45
-                },
-                {
-                    layer: 'April 8th - Nurse Week5-6',
-                    opacity: 0.45
-                }
-            ],
-            onChapterExit: [{
-                    layer: 'April 8th - Doc Week5-6',
-                    opacity: 0.
-                },
-                {
-                    layer: 'April 8th - Nurse Week5-6',
-                    opacity: 0
-                }
-            ]
-        },
-
-        {
-            id: 'Lamu',
-            description: 'In every scenario, we are expecting total staff capacity in Isiolo and Lamu will be critically low to non-existent by week 1.',
-            location: {
-                center: [37.40658, -0.17094],
-                zoom: 6.70,
-                pitch: 0.00,
-                bearing: 0.00
-            },
-            onChapterEnter: [{
-                layer: 'Lamu-isiolo',
-                opacity: 0.45
-            }],
-            onChapterExit: [{
-                layer: 'Lamu-isiolo',
-                opacity: 0.
-            }]
-        },
-
-        {
-            id: 'Aspect3-HIVgraph',
-            title: 'An Expected Increase in Health Visits by People Living with HIV',
-            image: 'https://raw.githubusercontent.com/CmdrKerfy/covid-hiv-story-map-hcw/master/src/vanilla-js/images/COVIDVisitsHIV.png',
-            description: 'While the number of nurses and doctors will decrease, as seeen on the map to the right, the number of health facility visits will simultaneously increase. This dramatic upward trend in demand by the HIV population will begin to strain the shrinking number of healtcare workers by the end of week one.',
-            location: {
-                center: [35.40804, -0.19256],
-                zoom: 5.71,
-                pitch: 0.00,
-                bearing: 0.00
-            },
-            onChapterEnter: [{
-                    layer: 'April 8th - Nurse Week1',
-                    opacity: 0.45
-                },
-                {
-                    layer: 'April 8th - Doc Week1',
-                    opacity: 0.45
-                }
-            ],
-            onChapterExit: [{
-                    layer: 'April 8th - Nurse Week1',
-                    opacity: 0
-                },
-                {
-                    layer: 'April 8th - Doc Week1',
-                    opacity: 0
-                }
-            ]
-        },
-
-        {
-            id: 'Aspect3-Week-Two',
-            title: 'Week Two Staff Capacity',
-            image: 'https://raw.githubusercontent.com/CmdrKerfy/covid-hiv-story-map-hcw/master/img/wikicom/h6.jpg',
-            description: 'By week two, as the number of healthcare workers becomes smaller, expect people living with HIV to begin experiencing difficulties receiving treatment.',
-            location: {
-                center: [35.40804, -0.19256],
-                zoom: 5.71,
-                pitch: 0.00,
-                bearing: 0.00
-            },
-            onChapterEnter: [{
-                    layer: 'April 8th - Doc Week2',
-                    opacity: 0.45
-                },
-                {
-                    layer: 'April 8th - Nurse Week2',
-                    opacity: 0.45
-                }
-            ],
-            onChapterExit: [{
-                    layer: 'April 8th - Doc Week2',
-                    opacity: 0.
-                },
-                {
-                    layer: 'April 8th - Nurse Week2',
-                    opacity: 0
-                }
-            ]
-        },
-
-        {
-            id: 'Aspect3-Week-Three',
-            title: 'Week Three Staff Capacity',
-            image: 'https://raw.githubusercontent.com/CmdrKerfy/covid-hiv-story-map-hcw/master/img/news/ap1.jpg',
-            description: 'By week three, the demand is already far outpacing the continually shrinking workforce.',
-            location: {
-                center: [35.40804, -0.19256],
-                zoom: 5.71,
-                pitch: 0.00,
-                bearing: 0.00
-            },
-            onChapterEnter: [{
-                    layer: 'April 8th - Doc Week3',
-                    opacity: 0.45
-                },
-                {
-                    layer: 'April 8th - Nurse Week3',
-                    opacity: 0.45
-                }
-            ],
-            onChapterExit: [{
-                    layer: 'April 8th - Doc Week3',
-                    opacity: 0.
-                },
-                {
-                    layer: 'April 8th - Nurse Week3',
-                    opacity: 0
-                }
-            ]
-        },
-
-        {
-            id: 'Aspect3-Week-Four',
-            title: 'Week Four Staff Capacity',
-            image: 'https://raw.githubusercontent.com/CmdrKerfy/covid-hiv-story-map-hcw/master/img/news/bloomberg1.jpg',
-            description: 'By week 4, both doctor and nurse capacity are projected to be just a fraction of its current status.',
-            location: {
-                center: [35.40804, -0.19256],
-                zoom: 5.71,
-                pitch: 0.00,
-                bearing: 0.00
-            },
-            onChapterEnter: [{
-                    layer: 'April 8th - Doc Week4',
-                    opacity: 0.45
-                },
-                {
-                    layer: 'April 8th - Nurse Week4',
-                    opacity: 0.45
-                }
-            ],
-            onChapterExit: [{
-                    layer: 'April 8th - Doc Week4',
-                    opacity: 0.
-                },
-                {
-                    layer: 'April 8th - Nurse Week4',
-                    opacity: 0
-                }
-            ]
-        },
-
-        {
-            id: 'Aspect3-Week-Five',
-            title: 'Staff Capacity Week 5 & 6',
-            image: 'https://raw.githubusercontent.com/CmdrKerfy/covid-hiv-story-map-hcw/master/src/vanilla-js/images/kenyahos.jpg',
-            description: 'By week 5, the outbreak has caused an unsustainable strain on exisiting healthcare worker capacity. Total available healthcare workers are a fraction of inital capacity. By week 6, the healthcare system will be so overloaded, irreparable damage will likely have occurred. ',
-            location: {
-                center: [35.40804, -0.19256],
-                zoom: 5.71,
-                pitch: 0.00,
-                bearing: 0.00
-            },
-            onChapterEnter: [{
-                    layer: 'April 8th - Doc Week5-6',
-                    opacity: 0.45
-                },
-                {
-                    layer: 'April 8th - Nurse Week5-6',
-                    opacity: 0.45
-                }
-            ],
-            onChapterExit: [{
-                    layer: 'April 8th - Doc Week5-6',
-                    opacity: 0.
-                },
-                {
-                    layer: 'April 8th - Nurse Week5-6',
-                    opacity: 0
-                }
-            ]
-        },
-
-        // {
-        //     id: 'Scenario5-Week6',
-        //     title: 'Scenario 5: (Week 6)',
-        //     image: '/img/news/reuters1.jpg',
-        //     description: 'In contrast to the pervious map, Scenario 5, Week 6, sees even more dramatic dropoffs',
-        //     location: {
-        //         center: [35.40804, -0.19256],
-        //         zoom: 5.71,
-        //         pitch: 0.00,
-        //         bearing: 0.00
-        //     },
-        //     onChapterEnter: [{
-        //         layer: 'April 8th - Doc Week5-6',
-        //         opacity: 0.45
-        //     },
-        //     {
-        //         layer: 'April 8th - Nurse Week5-6',
-        //         opacity: 0.45
-        //     }
-        // ],
-        //     onChapterExit: [{
-        //         layer: 'April 8th - Doc Week5-6',
-        //         opacity: 0.
-        //     },
-        //     {
-        //         layer: 'April 8th - Nurse Week5-6',
-        //         opacity: 0
-        //     }]
-        // },
-
-        {
-            id: 'MO-Explain',
-            title: 'A Special Note on Medical Officers',
-            image: 'https://raw.githubusercontent.com/CmdrKerfy/covid-hiv-story-map-hcw/master/img/wikicom/h26.jpg',
-            description: 'Medical Officers are appointed by the government and typically focused on preventive care. Their role can vary between technical and managerial roles, depending on clinc needs. While accounted for in this study, their numbers stay relatively consistent throughout the predicted outbreak.',
-            location: {
-                center: [35.40804, -0.19256],
-                zoom: 5.71,
-                pitch: 0.00,
-                bearing: 0.00
-            },
-            onChapterEnter: [{
-                layer: 'April 8th - Doc CURR',
-                opacity: 0
-            }],
-            onChapterExit: [{
-                layer: 'April 8th - Doc CURR',
-                opacity: 0.
-            }]
-        },
-
-        {
-            id: 'PLHIV-Intro',
-            image: 'https://raw.githubusercontent.com/CmdrKerfy/covid-hiv-story-map-hcw/master/img/chapter_titles/PLHIV.png',
-            location: {
-                center: [35.40804, -0.19256],
-                zoom: 5.71,
-                pitch: 0.00,
-                bearing: 0.00
-            },
-            onChapterEnter: [{
-                layer: 'April 8th - Doc CURR',
-                opacity: 0
-            }],
-            onChapterExit: [{
-                layer: 'April 8th - Doc CURR',
-                opacity: 0.
-            }]
-        },
-
-        {
-            id: 'PLHIV-Explain',
-            title: 'Current HIV-Positive Kenyan Patients',
-            description: 'While we started this visualization on doctors, nurses, and medical officers, it is important to also focus on the effects COVID will have on people living with HIV.',
-            location: {
-                center: [35.40804, -0.19256],
-                zoom: 5.71,
-                pitch: 0.00,
-                bearing: 0.00
-            },
-            onChapterEnter: [{
-                layer: 'April 8th - Doc CURR',
-                opacity: 0
-            }],
-            onChapterExit: [{
-                layer: 'April 8th - Doc CURR',
-                opacity: 0.
-            }]
-        },
-
-        {
-            id: 'PLHIV-S1-Week1',
-            title: 'SCENARIO #1, WEEK 1',
-            description: 'Starting with the Base Scenario, we can see the effects of COVID on the number of people living with HIV visiting medical facilities.',
-            location: {
-                center: [35.40804, -0.19256],
-                zoom: 5.71,
-                pitch: 0.00,
-                bearing: 0.00
-            },
-            onChapterEnter: [{
-                layer: 'PLHIV Visits S1W1',
-                opacity: 0.45
-            }],
-            onChapterExit: [{
-                layer: 'PLHIV Visits S1W1',
-                opacity: 0.
-            }]
-        },
-
-        {
-            id: 'PLHIV-S1-Week6',
-            title: 'SCENARIO #1, WEEK 6',
-            image: 'https://raw.githubusercontent.com/CmdrKerfy/covid-hiv-story-map-hcw/master/img/wikicom/h14.jpg',
-            description: '...and the expected increase by week 6.',
-            location: {
-                center: [35.40804, -0.19256],
-                zoom: 5.71,
-                pitch: 0.00,
-                bearing: 0.00
-            },
-            onChapterEnter: [{
-                layer: 'PLHIV Visits S1W6',
-                opacity: 0.45
-            }],
-            onChapterExit: [{
-                layer: 'PLHIV Visits S1W6',
-                opacity: 0.
-            }]
-        },
-
-        {
-            id: 'PLHIV-S5-Week1',
-            title: 'SCENARIO #5, WEEK 1',
-            description: 'Similarly, we can look at the Scenario #5 projection of the number facility visits by PLHIV, starting with week 1.',
-            location: {
-                center: [35.40804, -0.19256],
-                zoom: 5.71,
-                pitch: 0.00,
-                bearing: 0.00
-            },
-            onChapterEnter: [{
-                layer: 'PLHIV Visits S5W1',
-                opacity: 0.45
-            }],
-            onChapterExit: [{
-                layer: 'PLHIV Visits S5W1',
-                opacity: 0.
-            }]
-        },
-
-        {
-            id: 'PLHIV-S5-Week6',
-            title: 'SCENARIO #5, WEEK 6',
-            //description: 'In contrast, the last week of scenario #5:',
-            image: 'https://raw.githubusercontent.com/CmdrKerfy/covid-hiv-story-map-hcw/master/img/news/nationmediagroup.jpg',
-            location: {
-                center: [35.40804, -0.19256],
-                zoom: 5.71,
-                pitch: 0.00,
-                bearing: 0.00
-            },
-            onChapterEnter: [{
-                layer: 'PLHIV Visits S5W6',
-                opacity: 0.45
-            }],
-            onChapterExit: [{
-                layer: 'PLHIV Visits S5W6',
-                opacity: 0.
-            }]
-        },
-
-        {
-            id: 'PLHIV-COVID-S1',
-            title: 'People Living with HIV (No Viral Supression)',
-            description: 'We can also use the models in this study to examine the relationship between COVID and the HIV population that is not virally suppressed. <br /> <br /> This map depicts the amount of people non-virally suppressed HIV population expected to become infected by COVID-19, based on Scenario #1 (Base)',
-            location: {
-                center: [35.40804, -0.19256],
-                zoom: 5.71,
-                pitch: 0.00,
-                bearing: 0.00
-            },
-            onChapterEnter: [{
-                layer: 'PLHIV NVS COVID S1',
-                opacity: 0.45
-            }],
-            onChapterExit: [{
-                layer: 'PLHIV NVS COVID S1',
-                opacity: 0.
-            }]
-        },
-
-        {
-            id: 'PLHIV-COVID-S4',
-            title: 'SCENARIO #5, WEEK 6',
-            //description: 'In comparison, Scenario #5.',
-            image: 'https://raw.githubusercontent.com/CmdrKerfy/covid-hiv-story-map-hcw/master/img/wikicom/h25.jpg',
-            location: {
-                center: [35.40804, -0.19256],
-                zoom: 5.71,
-                pitch: 0.00,
-                bearing: 0.00
-            },
-            onChapterEnter: [{
-                layer: 'PLHIV NVS COVID S6',
-                opacity: 0.45
-            }],
-            onChapterExit: [{
-                layer: 'PLHIV NVS COVID S6',
-                opacity: 0.
-            }]
-        },
-
-        {
-            id: 'NextSteps-Intro',
-            image: 'https://raw.githubusercontent.com/CmdrKerfy/covid-hiv-story-map-hcw/master/img/chapter_titles/nextsteps.png',
-            location: {
-                center: [35.40804, -0.19256],
-                zoom: 5.71,
-                pitch: 0.00,
-                bearing: 0.00
-            },
-            onChapterEnter: [{
-                layer: 'April 8th - Doc CURR',
-                opacity: 0
-            }],
-            onChapterExit: [{
-                layer: 'April 8th - Doc CURR',
+                layer: 'lesotho-1',
                 opacity: 0
             }]
         },
 
         {
-            id: 'NextSteps-Explain',
-            // title: 'Putting it All Together',
-            image: 'https://raw.githubusercontent.com/CmdrKerfy/covid-hiv-story-map-hcw/master/img/wikicom/h7.jpg',
-            description: 'We hope that the findings of this study can use by key stakeholders within Kenya to help with their planning and resource allocation',
+            id: 'TX-CURR',
+            title: 'Indicator: TX_CURR',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/Family_Lesotho.jpg',
+            description: 'We will start with taking a closer look at TX_CURR. As you can see on the map there are strong concetrations in Hlotse Urban, Teya-Teyaneng, Mafeteng Urban, and Maseru City Councils. For this indicator, we will take a closer look at the density within Maseru CC.',
             location: {
-                center: [35.40804, -0.19256],
-                zoom: 5.71,
+                center: [27.48014, -29.61933],
+                zoom: 7.61,
                 pitch: 0.00,
                 bearing: 0.00
             },
             onChapterEnter: [{
-                layer: 'April 8th - Doc CURR',
-                opacity: 0
+                layer: 'lesotho-3',
+                opacity: 1
             }],
             onChapterExit: [{
-                layer: 'April 8th - Doc CURR',
+                layer: 'lesotho-3',
                 opacity: 0
             }]
         },
 
+        {
+            id: 'TX-CURR-Zoom',
+            title: 'Maseru Community Council',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/Couple_Lesotho.png',
+            description: 'When taking a closer look, we can see that there are particular concentrations in the southeast part of the CC, near the border with Berea. While Borokhoaneng and Lower Seoli have much of it, high levels are consistent throughout the capital.',
+            location: {
+                center: [27.45210, -29.31503],
+                zoom: 11.64,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-3',
+                opacity: 1
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-3',
+                opacity: 0.
+            }]
+        },
 
+        {
+            id: 'TXNEW-Intro',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/chapter_titles/4_TX_NEW.png',
+            location: {
+                center: [27.48014, -29.61933],
+                zoom: 7.61,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-4',
+                opacity: 0
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-4',
+                opacity: 0
+            }]
+        },
+
+        {
+            id: 'TX-NEW',
+            title: 'Indicator: TX_NEW',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/Hospital3.jpg',
+            description: 'Next, we will move down the treatment cascade to TX_NEW. As you can see on the map there are strong concetrations in Maputose Urban, Teya-Teyaneng, Manonyane, Mafeteng, and Maseru City Councils. For this indicator, we will again take a closer look at the density within Maseru CC.',
+            location: {
+                center: [27.48014, -29.61933],
+                zoom: 7.61,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-4',
+                opacity: 1
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-4',
+                opacity: 0
+            }]
+        },
+
+        {
+            id: 'TX-NEW-Zoom',
+            title: 'Maseru Community Council',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/Hospital2.JPG',
+            description: 'When taking a closer look, we can see that there are particular concentrations the center of the CC, in Upper/Lower Thamae and New Europa neighbhorhoods.',
+            location: {
+                center: [27.45210, -29.31503],
+                zoom: 11.64,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-4',
+                opacity: 1
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-4',
+                opacity: 0.
+            }]
+        },
+
+
+        {
+            id: 'TXNETNEW-Intro',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/chapter_titles/5_TX_NET_NEW.png',
+            location: {
+                center: [27.48014, -29.61933],
+                zoom: 7.61,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-5',
+                opacity: 0
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-5',
+                opacity: 0
+            }]
+        },
+
+        {
+            id: 'TX-NET-NEW',
+            title: 'Indicator: TX_NET_NEW',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/Family2_Lesotho.jpg',
+            description: 'Continuing onto the twin indicator TX_NET_NEW, the visualization has a more dramatic shift. Most areas would be considered moderate losses, symbolized with orange (~ -200) with only Mamafubelu and Maseru City Councils higher losses Gains, symbolized with green, are only occuring in Qhoasing and Maseru City Councils. For consistency, we will again zoom into Maseru.',
+            location: {
+                center: [27.48014, -29.61933],
+                zoom: 7.61,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-5',
+                opacity: 1
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-5',
+                opacity: 0
+            }]
+        },
+
+        {
+            id: 'TX-NET-NEW-Zoom',
+            title: 'Maseru Community Council',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/AIDS2.jpg',
+            description: 'Upon closer inspection, while there are losses across the city, in particular Maseru East, there have been significant gains (dark green) within the city center.',
+            location: {
+                center: [27.45210, -29.31503],
+                zoom: 11.64,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-5',
+                opacity: 1
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-5',
+                opacity: 0
+            }]
+        },
+
+        {
+            id: 'TXML-Intro',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/chapter_titles/6_TX_ML.png',
+            location: {
+                center: [27.48014, -29.61933],
+                zoom: 7.61,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-6',
+                opacity: 0
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-6',
+                opacity: 0
+            }]
+        },
+
+        {
+            id: 'TX-ML',
+            title: 'Indicator: TX_ML',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/Family4.jpg',
+            description: 'Examining mortality and loss within Lesotho also causes a notable shift in the map. For this indicator, there are only strong correlations within Mapoteng and Maseru City Councils, with a focus on the latter',
+            location: {
+                center: [27.48014, -29.61933],
+                zoom: 7.61,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-6',
+                opacity: 1
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-6',
+                opacity: 0
+            }]
+        },
+
+        {
+            id: 'TX-ML-Zoom',
+            title: 'Maseru Community Council',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/AIDS.jpg',
+            description: 'When observing the capital, it becomes obvious that the only neighborhood worth highlighting is, again, the Lower/Upper Thame',
+            location: {
+                center: [27.45210, -29.31503],
+                zoom: 11.64,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-6',
+                opacity: 1
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-6',
+                opacity: 0
+            }]
+        },
+
+        {
+            id: 'TXPVLS-Intro',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/chapter_titles/7_TX_PVLS.png',
+            location: {
+                center: [27.48014, -29.61933],
+                zoom: 7.61,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-7',
+                opacity: 0
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-7',
+                opacity: 0
+            }]
+        },
+
+        {
+            id: 'TX-PVLS',
+            title: 'Indicator: TX_PVLS',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/PHI_Lesotho.jpg',
+            description: 'Analyzing the percentage of ART patients with a suppressed viral load show much higher correlations around the country, with hotspots in Mohale\'s Hoek, Mafeteng Urban, Mapoteng, Butha Buthe, Teya-Teyaneng, Maputsoe Urban, and Maseru Community Councils. For consistency, we will again look at the captial.',
+            location: {
+                center: [27.48014, -29.61933],
+                zoom: 7.61,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-7',
+                opacity: 1
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-7',
+                opacity: 0
+            }]
+        },
+
+        {
+            id: 'TX-PVLS-Zoom',
+            title: 'Maseru Community Council',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/VMMC_Lesotho.jpg',
+            description: 'While the hot spots are spread throughout the city for TX_PVLS, a majority of the virally supressed appear to be going to health facilites within Maseru East and Lower/Upper Thame.',
+            location: {
+                center: [27.45210, -29.31503],
+                zoom: 11.64,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-7',
+                opacity: 1
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-7',
+                opacity: 0
+            }]
+        },
+
+        {
+            id: 'TXRTT-Intro',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/chapter_titles/8_TX_RTT.png',
+            location: {
+                center: [27.48014, -29.61933],
+                zoom: 7.61,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-8',
+                opacity: 0
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-8',
+                opacity: 0
+            }]
+        },
+
+        {
+            id: 'TX-RTT',
+            title: 'Indicator: TX_RTT',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/Family5.jpg',
+            description: 'Patients returning to treatment diverge noticeably from the other treatment indicators. Unlike the others, heavy concentrations are instead within Teya-Teyaneng, Mapoteng, and at its highest, Mamafubelu Community Councils.',
+            location: {
+                center: [27.48014, -29.61933],
+                zoom: 7.61,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-8',
+                opacity: 1
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-8',
+                opacity: 0
+            }]
+        },
+
+        {
+            id: 'TX-RTT-Zoom',
+            title: 'Teya-Teyaneng, Mapoteng, and Mamafubelu Community Councils.',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/PHI_Lesotho.jpg',
+            description: 'Within Mamafubelu, return to follow-up is concentrated in on the east side, near the border with Bolahla. The health facility, Pontmain H/C, is located east of Ha Fako and Ha Sekeleme. <br /> <br /> In Mapoteng Community Council, the return to treatment population is concentrated in the NW quadrent of the city. Specifically, Maluti Adventist Hospital.<br /> <br /> For Teya-Teyaneng, patients were returning to followup using the Berea Government Hospital, located near the center of the city.',
+            location: {
+                center: [27.82559, -28.96590],
+                zoom: 9.58,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-8',
+                opacity: 1
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-8',
+                opacity: 0
+            }]
+        },
+
+        {
+            id: 'HTS_TST-Intro',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/chapter_titles/1_HTS_TST.png',
+            location: {
+                center: [27.48014, -29.61933],
+                zoom: 7.61,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-1',
+                opacity: 0
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-1',
+                opacity: 0
+            }]
+        },
+
+        {
+            id: 'HTS_TST',
+            title: 'Indicator: HTS_TST',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/PMTCT_Lesotho.jpg',
+            description: 'Switching to testing, most of the HIV related testing occurs within Mohale\'s Hoek Urban Council and Maseru City Council, with the majority occuring in the former.',
+            location: {
+                center: [27.48014, -29.61933],
+                zoom: 7.61,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-1',
+                opacity: 1
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-1',
+                opacity: 0
+            }]
+        },
+
+        {
+            id: 'HTS-TST-Zoom',
+            title: 'Mohale\'s Hoek Urban Council',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/Testing.png',
+            description: 'Within Mohale\'s Hoek Urban Council, testing is primarily in the northeast, using Nts\'ekhe Hospital, located west of Mohale\'s Hoek High School',
+            location: {
+                center: [27.42334, -30.16053],
+                zoom: 12.21,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-1',
+                opacity: 1
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-1',
+                opacity: 0
+            }]
+        },
+
+        {
+            id: 'HTS_TST-POS-Intro',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/chapter_titles/2_HTS_TST_POS.png',
+            location: {
+                center: [27.48014, -29.61933],
+                zoom: 7.61,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-2',
+                opacity: 0
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-2',
+                opacity: 0
+            }]
+        },
+
+        {
+            id: 'HTS-TST-POS',
+            title: 'Indicator: HTS_TST_POS',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/Testing2.jpg',
+            description: 'When isolating for postive results, the testing landscape changes slightly. While Mohale\'s Hoek Urban Council and Maseru City Council are still the focus, Mafeteng Urban Council has also reported an above average amount of positive tests. As the Mohale\'s Hoek Urban Council outlook is the same as HTS_TST, we will instead do a deeper dive into Maseru City Council.',
+            location: {
+                center: [27.48014, -29.61933],
+                zoom: 7.61,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-2',
+                opacity: 1
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-2',
+                opacity: 0
+            }]
+        },
+
+        {
+            id: 'HTS-TST-POS-Zoom',
+            title: 'Maseru Community Council',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/Testing3.jpg',
+            description: 'Postive tests are mostly evenly distributed around the health facilities within Maseru with particularly high amouonts around Maseru East, Lower/Upper Thame, White City, and Ha Motseoneng.',
+            location: {
+                center: [27.45210, -29.31503],
+                zoom: 11.64,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-2',
+                opacity: 1
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-2',
+                opacity: 0
+            }]
+        },
 
     ]
 };
-
-
-// location: {
-//     center: [35.70804, 0.01256],
-//     zoom: 6.26,
-//     pitch: 0.00,
-//     bearing: 0.00
-// },
-
-// {
-//     // Outstanding: 1) Need new picture.  
-//     id: 'GenCOVID-Intro',
-//     image: '/img/chapter_titles/GeHeCOVID.png',
-//     location: {
-//         center: [35.40804, -0.19256],
-//         zoom: 5.71,
-//         pitch: 0.00,
-//         bearing: 0.00
-//     },
-//     onChapterEnter: [{
-//         layer: 'April 8th - Doc CURR',
-//         opacity: 0
-//     }
-// ],
-//     onChapterExit: [{
-//         layer: 'April 8th - Doc CURR',
-//         opacity: 0.
-//     }]
-// },
-
-// {
-//     // Outstanding: 1) Need new picture.  
-//     id: 'GeHeCOVID-Explain',
-//     title: 'Putting it All Together',
-//     description: 'adsfasdfjkas;dfj;asjdfja;sdfjka;jsdklf',
-//     location: {
-//         center: [35.40804, -0.19256],
-//         zoom: 5.71,
-//         pitch: 0.00,
-//         bearing: 0.00
-//     },
-//     onChapterEnter: [{
-//         layer: 'April 8th - Doc CURR',
-//         opacity: 0
-//     }
-// ],
-//     onChapterExit: [{
-//         layer: 'April 8th - Doc CURR',
-//         opacity: 0.
-//     }]
-// },
