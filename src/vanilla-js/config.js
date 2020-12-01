@@ -31,6 +31,102 @@ var config = {
         },
 
         {
+            id: 'Lesotho-PREV-intro',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/chapter_titles/10A_Prev.png',
+            location: {
+                center: [27.48014, -29.61933],
+                zoom: 7.61,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-10A',
+                opacity: 0
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-10A',
+                opacity: 0
+            }]
+        },
+
+        {
+            id: 'Lesotho-PREV',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/Testing.png',
+            description: 'Words on HIV Prev',
+            location: {
+                center: [27.48014, -29.61933],
+                zoom: 7.61,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-10A',
+                opacity: 1
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-10A',
+                opacity: 0
+            }]
+        },
+
+        {
+            id: 'Lesotho-VLS-intro',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/chapter_titles/10B_VLS.png',
+            location: {
+                center: [27.48014, -29.61933],
+                zoom: 7.61,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'lesotho-10B',
+                opacity: 0
+            }],
+            onChapterExit: [{
+                layer: 'lesotho-10B',
+                opacity: 0
+            }]
+        },
+
+        {
+            id: 'Lesotho-VLS',
+            image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/Testing3.jpg',
+            description: 'Words on HIV VLS.',
+            location: {
+                center: [27.48014, -29.61933],
+                zoom: 7.61,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                    layer: 'lesotho-10B',
+                    opacity: 1
+                },
+                {
+                    layer: 'lesotho-labels10B',
+                    opacity: 1
+                },
+                {
+                    layer: 'lesotho-lines10B',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [{
+                    layer: 'lesotho-10B',
+                    opacity: 0
+                },
+                {
+                    layer: 'lesotho-labels10B',
+                    opacity: 0
+                },
+                {
+                    layer: 'lesotho-lines10B',
+                    opacity: 0
+                }
+            ]
+        },
+
+        {
             id: 'HTS_TST-Intro',
             image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/chapter_titles/1_HTS_TST.png',
             location: {
