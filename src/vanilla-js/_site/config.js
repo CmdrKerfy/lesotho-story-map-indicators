@@ -541,7 +541,7 @@ var config = {
             id: 'Composite',
             title: 'Composite Scores',
             image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/Family5.jpg',
-            description: 'diverge noticeably from the other treatment indicators. Unlike the others, heavy concentrations are instead within Teya-Teyaneng, Mapoteng, and at its highest, Mamafubelu Community Councils.',
+            description: '[EXPLAIN COMPOSITE INDICATORS]',
             location: {
                 center: [27.48014, -29.61933],
                 zoom: 7.61,
@@ -562,10 +562,10 @@ var config = {
             id: 'Composite-Zoom',
             title: 'Maseru Community Council',
             image: 'https://raw.githubusercontent.com/CmdrKerfy/lesotho-story-map-indicators/master/img/wikicoms/Family5.jpg',
-            description: 'When taking a closer look, we can see that there are particular concentrations in the southeast part of the CC, near the border with Berea. While Borokhoaneng and Lower Seoli have much of it, high levels are consistent throughout the capital.',
+            description: 'When observing the capital, most areas are keeping above 0, with around four sites scoring below zero.',
             location: {
-                center: [27.82559, -28.96590],
-                zoom: 9.58,
+                center: [27.45210, -29.31503],
+                zoom: 11.64,
                 pitch: 0.00,
                 bearing: 0.00
             },
